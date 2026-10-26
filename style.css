@@ -1,0 +1,745 @@
+:root {
+  --podplane-blue: #0066ff;
+  --podplane-ink: #121826;
+  --podplane-muted: #5d6677;
+  --podplane-surface: #f4f7fb;
+  --slidev-code-font-size: 14px;
+}
+
+.slidev-layout {
+  background: #fff;
+  color: var(--podplane-ink);
+  font-size: 1.65rem;
+}
+
+.slidev-layout h1 {
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+
+.slidev-layout h1 + p {
+  margin-top: 1.25rem;
+}
+
+.slidev-layout li {
+  margin-block: 0.7rem;
+}
+
+.slidev-layout ol {
+  list-style: upper-alpha;
+  padding-left: 1.5em;
+}
+
+.slidev-layout ol li::marker {
+  color: var(--podplane-blue);
+  font-weight: 700;
+}
+
+.slidev-code-wrapper {
+  --terminal-inline-padding: 1.25rem;
+  background: var(--podplane-surface);
+  border: 1px solid #d7deea;
+  border-radius: 1rem;
+  box-shadow: 0 0.35rem 1rem rgb(18 24 38 / 8%);
+  overflow: hidden;
+  padding-top: calc(var(--terminal-inline-padding) + var(--terminal-inline-padding) + 0.65rem);
+}
+
+.slidev-code-wrapper::before {
+  background: #ff5f57;
+  border-radius: 50%;
+  box-shadow: 1.1rem 0 #ffbd2e, 2.2rem 0 #28c840;
+  content: '';
+  height: 0.65rem;
+  left: var(--terminal-inline-padding);
+  position: absolute;
+  top: var(--terminal-inline-padding);
+  width: 0.65rem;
+}
+
+.slidev-code-wrapper .slidev-code {
+  background: transparent !important;
+  border-radius: 0;
+  margin: 0;
+  padding: 0 var(--terminal-inline-padding) var(--terminal-inline-padding) !important;
+}
+
+.slidev-code .line:has(> span:empty) {
+  line-height: 0.4;
+}
+
+.slidev-code code,
+.slidev-code .line:not(:has(> span:empty)) {
+  line-height: 1.3;
+}
+
+.slidev-layout h1:has(+ .slidev-code-wrapper) {
+  margin-bottom: 1.5rem;
+}
+
+.section-number {
+  align-items: center;
+  background: var(--podplane-blue);
+  color: #fff;
+  display: flex;
+  font-size: 1.25rem;
+  font-weight: 700;
+  height: 2.5rem;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 2.5rem;
+  width: 2.5rem;
+}
+
+.experiment-grid {
+  display: grid;
+  gap: 1.1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
+.experiment-card {
+  background: var(--podplane-surface);
+  border: 1px solid #d7deea;
+  border-radius: 1rem;
+  min-height: 8.5rem;
+  padding: 1.35rem 1.2rem 1.1rem;
+  position: relative;
+}
+
+.experiment-label {
+  background: #fff;
+  border-radius: 0.3rem;
+  color: var(--podplane-blue);
+  font-size: 0.75rem;
+  font-weight: 800;
+  left: 1rem;
+  letter-spacing: 0.13em;
+  padding: 0 0.45rem;
+  position: absolute;
+  text-transform: uppercase;
+  top: -0.55rem;
+}
+
+.experiment-copy {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.experiment-findings {
+  grid-column: 1 / -1;
+  min-height: 10rem;
+}
+
+.experiment-findings-intro {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.experiment-findings ul {
+  display: grid;
+  font-size: 1.15rem;
+  gap: 1rem 2.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  line-height: 1.3;
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.experiment-findings li {
+  margin: 0;
+}
+
+.eyebrow {
+  color: var(--podplane-blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.speaker {
+  color: var(--podplane-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 0.45rem;
+}
+
+.opening-content {
+  bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 3.5rem;
+  position: absolute;
+  right: 3.5rem;
+  top: 0;
+}
+
+.opening-content .question {
+  margin-top: 0;
+}
+
+.opening-content .slidev-vclick-hidden {
+  display: none;
+}
+
+.question {
+  font-size: 3.1rem;
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  line-height: 1.05;
+  margin-top: 2.2rem;
+  max-width: 85%;
+}
+
+.muted {
+  color: var(--podplane-muted);
+}
+
+.accent {
+  color: var(--podplane-blue);
+}
+
+.pill-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
+.pill {
+  background: var(--podplane-surface);
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 1.15rem 1.3rem;
+}
+
+.pill-centered {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.project-cards {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1.25rem;
+}
+
+.project-card {
+  align-items: center;
+  background: var(--podplane-surface);
+  border: 1px solid #d7deea !important;
+  border-style: solid !important;
+  border-radius: 1rem;
+  color: inherit;
+  display: flex;
+  text-decoration: none;
+}
+
+.project-card-featured {
+  justify-content: space-evenly;
+  min-height: 13rem;
+  padding: 1.1rem 1.5rem;
+}
+
+/* Optical nudge: the wide logo makes the centred text look right-heavy. */
+.project-card-featured > .project-github {
+  position: relative;
+  left: -0.75rem;
+}
+
+.project-card-row {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-card-row-5 {
+  gap: 0.75rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.project-card-tile {
+  flex-direction: column;
+  gap: 0.35rem;
+  justify-content: center;
+  padding: 0.9rem 0.4rem;
+  text-align: center;
+}
+
+.project-card-tile .project-logo-icon {
+  height: 3.25rem;
+  margin-bottom: 0.25rem;
+  width: 3.25rem;
+}
+
+.project-card-tile .project-logo-agent-sandbox {
+  padding: 0.45rem;
+}
+
+.project-card-tile .project-logo-nono {
+  height: 4.75rem;
+  width: 8rem;
+}
+
+.project-logo-wordmark {
+  color: var(--podplane-ink);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.55rem;
+  font-weight: 800;
+  height: auto;
+  justify-content: center;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  margin-bottom: 0.25rem;
+}
+
+.project-card .project-logo-wordmark span {
+  color: var(--podplane-blue);
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.project-card-tile strong {
+  color: var(--podplane-blue);
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.project-card-tile .github-repo {
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+.project-card-small {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-rows: 1fr auto;
+  height: 10rem;
+  padding: 1rem 1rem 1.1rem;
+  text-align: center;
+}
+
+.project-logo {
+  height: 5rem;
+  max-width: 100%;
+  object-fit: contain;
+  width: 11rem;
+}
+
+.project-logo-podplane {
+  height: 7.6rem;
+  width: 12rem;
+}
+
+.project-logo-icon {
+  height: 4.5rem;
+  width: 4.5rem;
+}
+
+.project-logo-agent-sandbox {
+  background: #326ce5;
+  border-radius: 0.75rem;
+  padding: 0.65rem;
+}
+
+.project-wordmark {
+  align-items: center;
+  display: flex;
+  gap: 0.65rem;
+  height: 6.25rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.project-wordmark strong {
+  color: var(--podplane-blue);
+  font-size: 1.35rem;
+}
+
+.project-github {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  text-align: center;
+}
+
+.project-github strong {
+  font-size: 1.25rem;
+}
+
+.project-card span {
+  color: #465166;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.github-repo {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.35rem;
+  justify-content: center;
+}
+
+.github-repo svg {
+  flex: 0 0 auto;
+  font-size: 1.15rem;
+}
+
+.final-contact {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1.15rem;
+}
+
+.final-contact a {
+  align-items: center;
+  border: 0 !important;
+  color: #465166;
+  display: inline-flex;
+  font-size: 0.9rem;
+  font-weight: 600;
+  gap: 0.4rem;
+  text-decoration: none;
+}
+
+.final-contact svg {
+  color: var(--podplane-blue);
+  font-size: 1.15rem;
+}
+
+.qr-frame {
+  background: transparent;
+  border: 0;
+  display: inline-flex;
+  padding: 0;
+}
+
+.common-footer {
+  bottom: 1rem;
+  color: var(--podplane-muted);
+  display: flex;
+  font-size: 0.75rem;
+  justify-content: space-between;
+  left: 3.5rem;
+  position: absolute;
+  right: 3.5rem;
+  z-index: 10;
+}
+
+.common-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-meta {
+  flex-shrink: 0;
+  margin-left: 1.5rem;
+}
+
+/* Talk content shares the existing light palette and project-card treatment. */
+.title-subtitle {
+  color: var(--podplane-muted);
+  font-size: 1.15rem;
+  margin: 1.5rem 0 0.8rem;
+}
+
+.opening-content .eyebrow {
+  margin-bottom: 1.5rem;
+}
+
+.talk-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1.8rem;
+}
+
+.talk-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.talk-card {
+  background: var(--podplane-surface);
+  border: 1px solid #d7deea;
+  border-radius: 1rem;
+  padding: 1.15rem 1.25rem;
+}
+
+.slidev-layout .talk-card h3 {
+  color: var(--podplane-blue);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin: 0 0 0.6rem;
+  opacity: 1;
+  text-transform: none;
+}
+
+.talk-card p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.talk-card p + p {
+  margin-top: 0.8rem;
+}
+
+.takeaway {
+  border-left: 3px solid var(--podplane-blue);
+  color: var(--podplane-muted);
+  font-size: 1.05rem;
+  line-height: 1.4;
+  margin-top: 1.4rem;
+  padding: 0.4rem 0 0.4rem 1rem;
+}
+
+.takeaway strong {
+  color: var(--podplane-ink);
+}
+
+.slidev-layout.isolation-slide h1 {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+.slidev-layout.kernel-controls-slide h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.harness-flow {
+  align-items: center;
+  display: flex;
+  font-size: 1.2rem;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 0.8rem 0;
+}
+
+.harness-flow span {
+  color: var(--podplane-blue);
+}
+
+.trust-map {
+  margin-top: 1.2rem;
+}
+
+.trust-client {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  gap: 0.3rem;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.trust-client span {
+  color: var(--podplane-muted);
+}
+
+.trust-execution {
+  border: 2px solid var(--podplane-blue);
+  border-radius: 1rem;
+  padding: 0.85rem 1.1rem;
+}
+
+.trust-inner {
+  align-items: center;
+  background: var(--podplane-surface);
+  border: 1px dashed #8d9fbd;
+  display: flex;
+  font-size: 1.1rem;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 0.65rem;
+  padding: 0.8rem;
+}
+
+.trust-inner span,
+.trust-workspace {
+  color: var(--podplane-muted);
+  font-size: 0.95rem;
+}
+
+.trust-harness {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.trust-harness strong {
+  margin-right: 0.25rem;
+}
+
+.trust-inner .trust-chip {
+  align-items: center;
+  background: #e6f0ff;
+  border: 1.5px solid var(--podplane-blue);
+  border-radius: 6px;
+  color: var(--podplane-blue);
+  display: inline-flex;
+  font-size: 0.85rem;
+  font-weight: 700;
+  gap: 4px;
+  padding: 2px 8px;
+}
+
+.trust-inner .trust-chip-loop {
+  background: var(--podplane-blue);
+  color: #fff;
+}
+
+.trust-workspace {
+  margin-top: 0.65rem;
+  text-align: center;
+}
+
+.trust-edges {
+  display: grid;
+  font-size: 0.95rem;
+  grid-template-columns: 1fr 1fr;
+  padding: 0.7rem;
+  text-align: center;
+}
+
+.trust-gateways {
+  margin-top: 0;
+}
+
+.trust-gateways .talk-card {
+  padding: 0.8rem 1.1rem;
+}
+
+.trust-gateways p {
+  font-size: 1rem;
+}
+
+.sandbox-detail {
+  align-items: stretch;
+}
+
+.demo-label {
+  margin: 1rem 0;
+}
+
+.demo-path {
+  align-items: center;
+  display: flex;
+  font-size: 1rem;
+  gap: 0.75rem;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.demo-path span {
+  background: var(--podplane-surface);
+  border: 1px solid #d7deea;
+  border-radius: 0.5rem;
+  padding: 0.7rem;
+}
+
+.demo-path b {
+  color: var(--podplane-blue);
+}
+
+/* Slide 4: "Sandboxes" as a cluster of speech bubbles. */
+.sandbox-chatter {
+  height: 22rem;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.sandbox-question {
+  background: var(--podplane-blue);
+  border-radius: 1.5rem;
+  box-shadow: 0 0.5rem 1.5rem rgb(0 102 255 / 22%);
+  color: #fff;
+  font-size: 1.9rem;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: -0.02em;
+  padding: 1.1rem 1.6rem;
+  position: absolute;
+  top: 7rem;
+}
+
+.sandbox-question::after {
+  border-left: 1.1rem solid transparent;
+  border-right: 1.1rem solid transparent;
+  border-top: 1.3rem solid var(--podplane-blue);
+  bottom: -1.15rem;
+  content: '';
+  left: 2.2rem;
+  position: absolute;
+}
+
+.sandbox-bubble {
+  align-items: center;
+  background: #fff;
+  border: 2px solid #d7deea;
+  border-radius: 1.25rem;
+  box-shadow: 0 0.35rem 1rem rgb(18 24 38 / 8%);
+  display: inline-flex;
+  font-size: 1.15rem;
+  font-weight: 600;
+  gap: 0.55rem;
+  padding: 0.65rem 1.1rem;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.sandbox-bubble svg {
+  color: var(--podplane-blue);
+  font-size: 1.4rem;
+}
+
+.sandbox-bubble::after {
+  background: inherit;
+  border-bottom: inherit;
+  border-left: inherit;
+  bottom: -0.5rem;
+  content: '';
+  height: 0.9rem;
+  left: 1.5rem;
+  position: absolute;
+  transform: rotate(-45deg);
+  width: 0.9rem;
+}
+
+.sb-vm { left: 25rem; top: 0.5rem; transform: rotate(-4deg); }
+.sb-containers { left: 40rem; top: 2.5rem; transform: rotate(3deg); }
+.sb-kernels { left: 29rem; top: 6.5rem; transform: rotate(2deg); }
+.sb-isolates { left: 46rem; top: 9rem; transform: rotate(-3deg); }
+.sb-wasm { left: 24rem; top: 12rem; transform: rotate(-2deg); }
+
+.sb-agent-sandbox {
+  background: var(--podplane-surface);
+  border-color: var(--podplane-blue);
+  color: var(--podplane-blue);
+  font-size: 1.3rem;
+  left: 23rem;
+  top: 17rem;
+  transform: rotate(1.5deg);
+}
+
+.sb-agent-sandbox img {
+  background: #326ce5;
+  border-radius: 0.45rem;
+  height: 1.9rem;
+  padding: 0.25rem;
+  width: 1.9rem;
+}
